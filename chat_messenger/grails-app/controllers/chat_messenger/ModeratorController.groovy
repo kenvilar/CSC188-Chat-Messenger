@@ -1,9 +1,16 @@
 package chat_messenger
 
+import org.springframework.dao.DataIntegrityViolationException
+import groovy.sql.Sql
+
 class ModeratorController {
 
+	def searchableService
+	def dataSource
+	def sessionFactory
+
     def index() { 
-		render(view:"moderatorPage")
+		render(view:"moderatorMainPage")
 	}
 
 	def addEmployee() {
@@ -11,7 +18,7 @@ class ModeratorController {
 
 		def firstName = params.firstName
 		def lastName = params.lastName
-		def location = params.location
+		def address = params.address
 		def userName = params.userName
 
 		Date now = new Date()
@@ -23,8 +30,8 @@ class ModeratorController {
 
 		String idNumber = date+"-"+idCode
 
-		db.execute("""insert into listOfEmployee(id,firstName,lastName,location,userName) 
-					values('${idNumber}','${firstName}','${lastName}','${location}','${userName}')""")
+		db.execute("""insert into list_of_employee(id,first_name,last_name,address,user_name) 
+				   values('${idNumber}','${firstName}','${lastName}','${address}','${userName}')""");
 
 		index()
 	}
