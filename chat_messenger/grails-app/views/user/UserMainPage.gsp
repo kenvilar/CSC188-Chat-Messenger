@@ -1,10 +1,17 @@
 <html>
-    <head><title>User Main Page</title></head>
+    <head>
+		<title>User Main Page</title>
+		<g:javascript library="jquery"/>
+		<r:layoutResources/>
+		<jq:jquery>
+
+		</jq:jquery>
+	</head>
     <body>
-		<div>
+		<div id="try">
 		<h1>Welcome!</h1>
 		</div>
-		
+
 		<div>
 			<g:each in="${result}" var="user">
 				<table>
