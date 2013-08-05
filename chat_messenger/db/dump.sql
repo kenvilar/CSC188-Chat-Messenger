@@ -42,7 +42,7 @@ ALTER TABLE public.hibernate_sequence OWNER TO postgres;
 -- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('hibernate_sequence', 2, true);
+SELECT pg_catalog.setval('hibernate_sequence', 1, false);
 
 
 SET default_tablespace = '';
@@ -54,11 +54,10 @@ SET default_with_oids = false;
 --
 
 CREATE TABLE list_of_employee (
-    id character varying(255) NOT NULL,
+    id character varying NOT NULL,
     address character varying(255) NOT NULL,
     first_name character varying(255) NOT NULL,
     last_name character varying(255) NOT NULL,
-    password character varying(255) NOT NULL,
     user_name character varying(255) NOT NULL
 );
 
@@ -69,24 +68,15 @@ ALTER TABLE public.list_of_employee OWNER TO postgres;
 -- Data for Name: list_of_employee; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO list_of_employee VALUES ('2013-7304', 'Sto. Rosario', 'Ken', 'Vilar', 'qwe', 'kenvilar');
-INSERT INTO list_of_employee VALUES ('2013-1295', 'Tibanga', 'Carlo', 'Apas', 'carloapas', 'kokocarlo');
+INSERT INTO list_of_employee VALUES ('2013-6302', 'Iligan', 'Ken', 'Vilar', 'kenvilar');
 
 
 --
--- Name: list_of_employee_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
---
-
-ALTER TABLE ONLY list_of_employee
-    ADD CONSTRAINT list_of_employee_id_key UNIQUE (id);
-
-
---
--- Name: list_of_employee_password_user_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: list_of_employee_id_user_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
 ALTER TABLE ONLY list_of_employee
-    ADD CONSTRAINT list_of_employee_password_user_name_key UNIQUE (password, user_name);
+    ADD CONSTRAINT list_of_employee_id_user_name_key UNIQUE (id, user_name);
 
 
 --
