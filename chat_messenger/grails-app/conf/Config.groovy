@@ -91,3 +91,7 @@ log4j = {
 }
 
 grails.config.defaults.locations = [KickstartResources]
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'chat_messenger.List_of_employee'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'chat_messenger.List_of_employeeAuthority'
+grails.plugins.springsecurity.authority.className = 'chat_messenger.Authority'
