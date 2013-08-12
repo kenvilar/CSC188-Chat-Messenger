@@ -23,8 +23,8 @@ class UserController {
 		def password = params.password
 		def address = params.address
 	
-		db.execute (INSERT INTO list_of_employee (first_name,last_name,address,password) 
-			VALUES('${firstName}','${lastName}','${address}','${password}')");)
+		db.execute ("""INSERT INTO list_of_employee (first_name,last_name,address,password) 
+			VALUES('${firstName}','${lastName}','${address}','${password}')""")
 		//replace everthing
 	}
 }
