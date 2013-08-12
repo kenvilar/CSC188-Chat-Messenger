@@ -26,10 +26,16 @@ class UserController {
 		//db.execute (INSERT INTO list_of_employee (first_name,last_name,address,password) 
 		//	VALUES('${firstName}','${lastName}','${address}','${password}')");)
 		
-		db.execute (UPDATE list_of_employee
-			SET (first_name,last_name,address,password) 
-			VALUES('${firstName}','${lastName}','${address}','${password}')
-			WHERE )
-		//replace everthing
+		db.execute ("""UPDATE list_of_employee
+			SET 
+				first_name = '${firstName}', 
+				last_name = '${lastName}', 
+				address = '${address}',
+				password = '${password}'
+			WHERE """)//id dayun
+		//replace everything
+		
+		//db.execute ("""INSERT INTO list_of_employee (first_name,last_name,address,password) 
+		//	VALUES('${firstName}','${lastName}','${address}','${password}')""")
 	}
 }
