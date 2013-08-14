@@ -72,9 +72,18 @@
 			
 			padding-right:2em;
 			
+			
 			}
+			#arrow{
+			
+				float:right;
+				
+			}
+			
 	</style>
 	
+	<script src="../js/jquery-1.8.3.js"></script>
+	<script src="../js/bootstrap.js"></script>
 	
 	</head>
     <body>
@@ -82,6 +91,12 @@
 			
 			
 		</div>
+		
+			
+		
+		
+		
+		
 		<div id="bodyDesign">
 	
 			<div id="toggle">
@@ -93,8 +108,12 @@
 					<div id="names">
 					<table>
 						<tr>
-							<td id="icon"><a><img class="logo" src="../images/icon1.png"></a></td>
+							<td id="icon"><a href="#profileModal" data-toggle="modal"><img class="logo" src="../images/icon1.png"></a></td>
 							<td>${user.first_name} ${user.last_name}</td>
+							
+							<div id="arrow">
+							>
+							</div>
 							
 						</tr>
 					</table>
