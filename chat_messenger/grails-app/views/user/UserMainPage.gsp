@@ -14,7 +14,7 @@
 				border:2px solid #a1a1a1;
 				padding:10px 20px; 
 				background:white;
-				width:20%;
+				width:23%;
 				height:100%;
 				//border-radius:25px;
 				float:left;
@@ -52,15 +52,24 @@
 				margin-top: 1em;
 			}
 			
+			#names:hover{
+				background:#C0C0C0;
+			}
 			#names{
-			border:2px solid #a1a1a1;
-			
+				width:100%;
+				padding-top:.5em;
+				margin-top:-.5em;
+				margin-bottom:-.5em;
+				height: 2em;
+				font-size:2em;
 			}
 			body{
+			
 				background:#dddddd;
 			
 			}
 			#icon{
+			
 			padding-right:2em;
 			
 			}
@@ -81,13 +90,15 @@
 		
 			<div id="nameList">
 				<g:each in="${result}" var="user">
+					<div id="names">
 					<table>
 						<tr>
-							<td id="icon">pp </td>
+							<td id="icon"><a><img class="logo" src="../images/icon1.png"></a></td>
 							<td>${user.first_name} ${user.last_name}</td>
 							
 						</tr>
 					</table>
+					</div>
 					<hr>
 				</g:each>
 			</div>
