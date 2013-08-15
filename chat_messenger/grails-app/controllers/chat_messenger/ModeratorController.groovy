@@ -24,8 +24,8 @@ class ModeratorController {
 		def password = params.password
 		def confirmPassword = params.confirmPassword
 		
-		def exist_username = db.rows("select username from list_of_employee")
-		def exist_pasword = db.rows("select password from list_of_employee")
+		def exist_username = db.rows("select username from employee")
+		def exist_pasword = db.rows("select password from employee")
 
 		Date now = new Date()
 		def date = g.formatDate(format:"yyyy", date:new Date())
@@ -42,8 +42,9 @@ class ModeratorController {
 		}else {
 			switch(password) {
 				case confirmPassword:
-					//db.execute("insert into list_of_employee (first_name,last_name,address,username,password) values('${firstName}','${lastName}','${address}','${username}','${password}')");
-					def employee = new List_of_employee(params)
+					//db.execute("insert into employee (first_name,last_name,address,username,password) values('${firstName}','${lastName}','${address}','${username}','${password}')");
+					params.put('enabled', true)
+					def employee = new Employee(params)
 					if(employee.save(flush: true))
 						println "na save sya!"
 					

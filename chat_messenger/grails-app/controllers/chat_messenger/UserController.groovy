@@ -11,7 +11,7 @@ class UserController {
 
     def index() { 
 		def db = new Sql(dataSource)
-		def result = db.rows("select * from list_of_employee order by first_name asc")
+		def result = db.rows("select * from employee order by first_name asc")
 		render(view:"UserMainPage",model:[result:result])
 	}
 	
@@ -23,10 +23,10 @@ class UserController {
 		def password = params.password
 		def address = params.address
 	
-		//db.execute (INSERT INTO list_of_employee (first_name,last_name,address,password) 
+		//db.execute (INSERT INTO employee (first_name,last_name,address,password) 
 		//	VALUES('${firstName}','${lastName}','${address}','${password}')");)
 		
-		db.execute ("""UPDATE list_of_employee
+		db.execute ("""UPDATE employee
 			SET 
 				first_name = '${firstName}', 
 				last_name = '${lastName}', 
@@ -35,7 +35,7 @@ class UserController {
 			WHERE """)//id dayun
 		//replace everything
 		
-		//db.execute ("""INSERT INTO list_of_employee (first_name,last_name,address,password) 
+		//db.execute ("""INSERT INTO employee (first_name,last_name,address,password) 
 		//	VALUES('${firstName}','${lastName}','${address}','${password}')""")
 	}
 }
