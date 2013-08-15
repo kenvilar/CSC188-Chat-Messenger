@@ -80,21 +80,23 @@
 				
 			}
 			
+			#hname:hover{
+			
+			color:blue;
+			
+			}
+			
 	</style>
 	
 	<script src="../js/jquery-1.8.3.js"></script>
 	<script src="../js/bootstrap.js"></script>
-	
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
 	</head>
     <body>
 		<div class="navbar">
 			
 			
 		</div>
-		
-			
-		
-		
 		
 		
 		<div id="bodyDesign">
@@ -108,11 +110,11 @@
 					<div id="names">
 					<table>
 						<tr>
-							<td id="icon"><a href="#profileModal" data-toggle="modal"><img class="logo" src="../images/icon1.png"></a></td>
-							<td>${user.first_name} ${user.last_name}</td>
+							<td id="icon"><a href="123"><img class="logo" src="../images/icon1.png"></a></td>
+							<td><a id="hname" href="#profileModal" data-toggle="modal">${user.first_name} ${user.last_name}</a></td>
 							
 							<div id="arrow">
-							>
+							<a href=""></a>
 							</div>
 							
 						</tr>
@@ -123,13 +125,41 @@
 			</div>
 		
 			<div id="conversation">
-			
+				<div data-spy="scroll">
+				
+				
+				
+				</div>
 			</div>
 			
 			<div id="message_pane">
 			
 			</div>
+			
+			
+			
+			<div id="profileModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" area-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h1> Profile </h1>
+					
+				</div>
+				<div class="modal-body">
+					table 
+					
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div>
 		<div>
+		
+		
+		
+		
+		
+		
+		
 		
 	</body>
 </html>
