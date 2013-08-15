@@ -14,6 +14,7 @@ class Employee {
 	boolean accountLocked
 	boolean passwordExpired
 
+	static searchable = [only: ['firstName', 'lastName']]
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
