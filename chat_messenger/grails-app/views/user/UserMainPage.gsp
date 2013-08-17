@@ -15,7 +15,7 @@
 				padding:10px 20px; 
 				background:white;
 				width:23%;
-				height:100%;
+				height:85%;
 				//border-radius:25px;
 				float:left;
 			}
@@ -45,7 +45,7 @@
 			
 			#message_pane{
 				border:2px solid #a1a1a1;
-				height: 25%;
+				height: 12%;
 				width: 73.5%;
 				float:right;
 				background:white;
@@ -84,6 +84,25 @@
 			
 			color:blue;
 			
+			}
+			
+			#profile tr{
+				padding-top:1em;
+				margin-top:1em;
+			}
+			#profile td{
+				padding-top:2em;
+				margin-top:1em;
+			}
+			
+			#send{
+				float:right;
+				margin-top:-1em;
+				padding-left:1em;
+			}
+			textarea:{
+			
+				width:100%;
 			}
 			
 	</style>
@@ -125,15 +144,30 @@
 			</div>
 		
 			<div id="conversation">
-				<div data-spy="scroll">
+				<div style="height:100%; width:100%; overflow:scroll;">
 				
 				
-				
+			
 				</div>
 			</div>
 			
 			<div id="message_pane">
-			
+				<table>
+				 <table>
+					<tr>
+						<td>
+							<textarea class="field span12" id="textarea" rows="4" placeholder="Enter a short synopsis">
+							</textarea>
+						</td>
+						<td id="send">
+						<button type="button" class="btn btn-large btn-primary" data-loading-text="Loading...">Loading state</button>
+						</td>
+					</tr>
+				 </table>
+				 
+				
+				
+				
 			</div>
 			
 			
@@ -145,7 +179,25 @@
 					
 				</div>
 				<div class="modal-body">
-					table 
+					<table id="profile">
+						<tr>
+							<td>Name: </td>
+							
+						</tr>
+						
+						<tr>
+							<td>Address: </td>					
+						</tr>
+						<tr>
+							<td>Age:  </td>					
+						</tr>
+						<tr>
+							<td>Civil Status: </td>					
+						</tr>
+						<tr>
+							<td>Gender: </td>					
+						</tr>
+					</table>
 					
 				</div>
 				<div class="modal-footer">
