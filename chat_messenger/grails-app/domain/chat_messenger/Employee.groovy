@@ -41,4 +41,8 @@ class Employee {
 	protected void encodePassword() {
 		password = springSecurityService.encodePassword(password)
 	}
+	
+	String toString(){
+		"${firstName} ${lastName}"
+	}
 }

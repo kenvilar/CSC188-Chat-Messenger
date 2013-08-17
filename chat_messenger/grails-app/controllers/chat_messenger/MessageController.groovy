@@ -37,7 +37,6 @@ class MessageController {
 		message.sender = lookupEmployee()
 		message.receiver = Employee.get(params.id)
 		message.save()
-		push 'notifyGroup'
 		def messages = currentConversation(employeeInstance)
 		render (view: 'showConversation', model: [employeeInstance: employeeInstance])
 		 
