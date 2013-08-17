@@ -1,0 +1,95 @@
+#nameList{
+				border:2px solid #a1a1a1;
+				padding:10px 20px; 
+				background:white;
+				width:23%;
+				height:85%;
+				//border-radius:25px;
+				float:left;
+			}
+			
+			#bodyDesign{
+				
+				
+				
+			
+			}
+			.navbar{
+				margin-top:-10px;
+				margin-left:-10px;
+				height:7%;
+				background:black;
+			}
+			
+			#conversation{
+				border:2px solid #a1a1a1;
+				padding:10px 40px; 
+				height: 70%;
+				width: 68%;
+				float:right;
+				background:white;
+			
+			}
+			
+			#message_pane{
+				border:2px solid #a1a1a1;
+				height: 12%;
+				width: 73.5%;
+				float:right;
+				background:white;
+				margin-top: 1em;
+			}
+			
+			#names:hover{
+				background:#C0C0C0;
+			}
+			#names{
+				width:100%;
+				padding-top:.5em;
+				margin-top:-.5em;
+				margin-bottom:-.5em;
+				height: 2em;
+				font-size:2em;
+			}
+			body{
+			
+				background:#dddddd;
+			
+			}
+			#icon{
+			
+			padding-right:2em;
+			
+			
+			}
+			#arrow{
+			
+				float:right;
+				
+			}
+			
+			#hname:hover{
+			
+			color:blue;
+			
+			}
+			
+			#profile tr{
+				padding-top:1em;
+				margin-top:1em;
+			}
+			#profile td{
+				padding-top:2em;
+				margin-top:1em;
+			}
+			
+			#send{
+				float:right;
+				margin-left:-5em;
+				margin-top:-5em;
+				padding-left:1em;
+			}
+			textarea:{
+			
+				width:100%;
+			}
