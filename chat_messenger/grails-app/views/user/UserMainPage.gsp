@@ -18,8 +18,8 @@
 	</head>
     <body>
 		<div class="navbar">
-			<br>
-			<p align="right" > <font color="white">	You are currently logged in as ${employee}  </font></p>
+			
+			
 		</div>
 		
 		
