@@ -2,17 +2,20 @@ package chat_messenger
 
 import org.springframework.dao.DataIntegrityViolationException
 import groovy.sql.Sql
-
+import grails.plugins.springsecurity.Secured
 class UserController {
 
 	def searchableService
 	def dataSource
 	def sessionFactory
 
+	def springSecurityService
+	
     def index() { 
 		def db = new Sql(dataSource)
 		def result = db.rows("select * from employee order by first_name asc")
-		render(view:"UserMainPage",model:[result:result])
+		def employee = Employee.get(springSecurityService.principal.id)
+		render(view:"UserMainPage",model:[result:result, employee:employee])
 	}
 	
 	def editUser(){
