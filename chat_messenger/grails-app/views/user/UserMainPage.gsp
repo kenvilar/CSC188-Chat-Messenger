@@ -26,7 +26,7 @@
 		<div id="bodyDesign">
 	
 			<div id="toggle">
-			<input type="submit" value="               Hide/Show              ">
+			<input type="submit" value="Hide/Show">
 			</div>
 		
 			<div id="nameList">
