@@ -2,16 +2,16 @@
 	<li class="dropdown dropdown-btn">
 		
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-			<g:message code="User"/> <b class="caret"></b>
+			<g:message code="Moderator"/> <b class="caret"></b>
 		</a>
 		
 		<ul class="dropdown-menu">
 		
-			<li class="">
+			<!--<li class="">
 				<a href="${createLink(uri: '/settings')}">
 					<g:message code="Settings"/>
 				</a>
-			</li>
+			</li>-->
 			<li class="">
 				<a href="${createLink(uri: '/logout')}">
 					<g:message code="Logout"/>

@@ -42,7 +42,9 @@
 	</div>
 	
 	<section id="info">
-		<center><a data-toggle="modal" href="#example" class="btn btn-primary btn-large">Add Employee</a><br/><br/></center>
+		<center>
+			<a data-toggle="modal" href="#example" class="btn btn-primary btn-large"><i class="icon-plus icon-black"></i></a><br/><br/>
+		</center>
 	</section>
 	
 </body>

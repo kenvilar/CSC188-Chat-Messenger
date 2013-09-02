@@ -15,13 +15,22 @@
 	<script src="../js/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/usermainpage.css"/>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
 	</head>
     <body>
 		<div class="navbar">
-			<br>
-			<p align="right" > <font color="white">	You are currently logged in as ${employee}  </font></p>
+		<br/>
+			<div align="right"><font color="white">You are currently logged in as</font></div>
+			<div class="btn-group pull-right">
+					<a class="btn btn-primary" href="#">${employee}</a>
+					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a data-toggle="modal" href="#edit">Edit</a></li>
+						<li><a data-toggle="modal" href="#show">Show Profile</a></li>
+					</ul>
+			</div>
 		</div>
-		
 		
 		<div id="bodyDesign">
 	
@@ -56,12 +65,13 @@
 				</div>
 			</div>
 			
+			
 			<div id="message_pane">
 				
 				 <table>
 					<tr>
 						<td>
-							<textarea class="field span12" id="textarea" rows="4" placeholder="Enter a short synopsis">
+							<textarea class="field span11" id="textarea" rows="4" placeholder="Write a message...">
 							</textarea>
 						</td>
 						<td id="send">
@@ -111,8 +121,69 @@
 			</div>
 		<div>
 		
+		<div align="center" class="container">
+			<div id="edit" class="modal hide fade in" style="display: none; ">
+				<div class="modal-header" align="left">
+					<a class="close icon-remove" data-dismiss="modal">X</a>
+					<h3>Please fill out the form</h3>
+				</div>
+				<div class="modal-body">
+					<g:form controller="moderator" action="addEmployee">
+						Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstName" required="true"/>
+						<br/>
+						Address: &nbsp;&nbsp;&nbsp;<input type="text" name="lastName" required="true"/>
+						<br/>
+						Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="address" required="true"/>
+						<br/>
+						Civil Status:<input type="text" name="username" required="true"/>
+						<br/>
+						Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" required="true"/>
+						<br/>
+						Hometown:&nbsp;&nbsp;<input type="password" name="confirmPassword" required="true"/>
+						<br/>
+						<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="submit" class="btn btn-primary" value="Edit"></center>
+					</g:form>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+		</div>
 		
-		
+		<div align="left" class="container">
+			<div id="show" class="modal hide fade in" style="display: none; ">
+				<div class="modal-header" align="left">
+					<a class="close icon-remove" data-dismiss="modal">X</a>
+					<h3>Please fill out the form</h3>
+				</div>
+				<div class="modal-body">
+					<g:form controller="moderator" action="addEmployee">
+						Name:
+						<br/>
+						<br/>
+						Address: 
+						<br/>
+						<br/>
+						Age:
+						<br/>
+						<br/>
+						Civil Status:
+						<br/>
+						<br/>
+						Gender:
+						<br/>
+						<br/>
+						Honetown:
+						<br/>
+						<br/>
+					</g:form>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+		</div>
 		
 		
 		
