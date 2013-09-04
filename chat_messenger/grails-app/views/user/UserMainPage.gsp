@@ -173,22 +173,24 @@
 					<h1>My Profile</h1>
 				</div>
 				<div class="modal-body">
-					<g:form controller="moderator" action="addEmployee">
-						Name:
-						<br/>
-						<br/>
-						Address: 
-						<br/>
-						<br/>
-						Age:
-						<br/>
-						<br/>
-						Civil Status:
-						<br/>
-						<br/>
-						Gender:
-						<br/>
-						<br/>
+					<g:form controller="User" action="addEmployee">
+						<table id="profile">
+						<tr>
+							<td>Name:</td>
+						</tr>
+						<tr>
+							<td>Address:</td> 
+						</tr>
+						<tr>
+							<td>Age:</td>
+						</tr>
+						<tr>
+							<td>Civil Status:</td>
+						</tr>
+						<tr>
+							<td>Gender:</td>
+						</tr>
+						</table>
 					</g:form>
 				</div>
 				<div class="modal-footer">
