@@ -43,7 +43,7 @@
 	
 	<section id="info">
 		<center>
-			<a data-toggle="modal" href="#example" class="btn btn-primary btn-large"><i class="icon-plus icon-black"></i></a><br/><br/>
+			<a data-toggle="modal" href="#example" class="btn btn-primary btn-large"><i class="icon-plus icon-black"> Add Employee</i></a><br/><br/>
 		</center>
 	</section>
 	

@@ -24,12 +24,15 @@
 			<div align="right"><font color="white">You are currently logged in as</font></div>
 			
 			<div class="btn-group pull-right">
-					<a class="btn btn-primary" href="#">${employee}</a>
-					<a class="btn btn-primary" data-toggle="modal" href="#editProfile"> Edit Profile Info </a>
-					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">${employee} <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a data-toggle="modal" href="#edit">Edit</a></li>
+						<li><a data-toggle="modal" href="#edit">Edit Profile</a></li>
 						<li><a data-toggle="modal" href="#show">Show Profile</a></li>
+						<li class="">
+							<a href="${createLink(uri: '/logout')}">
+								<g:message code="Logout"/>
+							</a>
+						</li>
 					</ul>
 			</div>
 		</div>
@@ -93,32 +96,6 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					<h1> Profile </h1>
-
-
-<%--------------------%>		
-<%-----edit modal-----%>
-<%--------------------%>
-
-		<div align="center" class="container">
-			<div id="editProfile" class="modal hide fade in" style="display: none; ">
-				<div class="modal-header" align="left">
-					<a class="close icon-remove" data-dismiss="modal">X</a>
-					<h1>Fill out form</h1>
-				</div>
-				<div class="modal-body">
-					<g:form controller="user" action="addUser">
-						<div> <font size="2"> Firstname:&nbsp;<input type="text" name="firstName" required="true"></input>
-						</br>
-						Lastname:&nbsp;<input type="text" name="lastName" required="true"></input>
-						</br>
-						Address:&nbsp;<input type="text" name="lastName" required="true"></input>
-						</br>
-						Password:&nbsp;<input type="password" name="password" required="true"></input>
-						<center><input type="submit" class="btn btn-primary" value="Edit"></input></center>
-					</g:form>
-				</div>
-			</div>
-		</div>
 					
 				</div>
 				<div class="modal-body">
@@ -154,22 +131,20 @@
 			<div id="edit" class="modal hide fade in" style="display: none; ">
 				<div class="modal-header" align="left">
 					<a class="close icon-remove" data-dismiss="modal">X</a>
-					<h3>Please fill out the form</h3>
+					<h1>Please fill out the form</h1>
 				</div>
 				<div class="modal-body">
 					<g:form controller="moderator" action="addEmployee">
-						Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstName" required="true"/>
-						<br/>
-						Address: &nbsp;&nbsp;&nbsp;<input type="text" name="lastName" required="true"/>
-						<br/>
-						Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="address" required="true"/>
-						<br/>
+						Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstName" required="true"/>
+						<br/><br/>
+						Address: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="lastName" required="true"/>
+						<br/><br/>
+						Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="address" required="true"/>
+						<br/><br/>
 						Civil Status:<input type="text" name="username" required="true"/>
-						<br/>
+						<br/><br/>
 						Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" required="true"/>
-						<br/>
-						Hometown:&nbsp;&nbsp;<input type="password" name="confirmPassword" required="true"/>
-						<br/>
+						<br/><br/>
 						<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<input type="submit" class="btn btn-primary" value="Edit"></center>
 					</g:form>
@@ -184,7 +159,7 @@
 			<div id="show" class="modal hide fade in" style="display: none; ">
 				<div class="modal-header" align="left">
 					<a class="close icon-remove" data-dismiss="modal">X</a>
-					<h3>Please fill out the form</h3>
+					<h1>My Profile</h1>
 				</div>
 				<div class="modal-body">
 					<g:form controller="moderator" action="addEmployee">
@@ -201,9 +176,6 @@
 						<br/>
 						<br/>
 						Gender:
-						<br/>
-						<br/>
-						Honetown:
 						<br/>
 						<br/>
 					</g:form>
