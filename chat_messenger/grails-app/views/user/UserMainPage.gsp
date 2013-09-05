@@ -135,21 +135,32 @@
 				</div>
 				<div class="modal-body">
 					<g:form controller="moderator" action="addEmployee">
-						Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstName" required="true"/>
-						<br/><br/>
-						Address: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="lastName" required="true"/>
-						<br/><br/>
-						Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="address" required="true"/>
-						<br/><br/>
-						Civil Status:<input type="text" name="username" required="true"/>
-						<br/><br/>
-						Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" required="true"/>
-						<br/><br/>
-						<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="submit" class="btn btn-primary" value="Edit"></center>
+						<table id="profile" align="left"> 
+							<tr >
+								<td>Name</td> <td><input type="text" name="firstName" required="true"/> </td>
+							</tr>
+							<tr>
+								<td>Address</td> <td><input type="text" name="address" required="true"/> </td>
+							</tr>
+							<tr>
+								<td>Age</td> <td><input type="text" name="address" required="true"/> </td>
+							</tr>
+							<tr>	
+								<td>Civil Status</td> <td><input type="text" name="civil" required="true"/> </td>
+							</tr>
+							<tr>	
+								<td>Gender</td> <td><input type="text" name="gender" required="true"/> </td>
+								
+							</tr>
+						
+						</table>
+						
+						
+						
 					</g:form>
 				</div>
 				<div class="modal-footer">
+					<input type="submit" class="btn btn-primary" value="Edit">
 					<a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
 				</div>
 			</div>
