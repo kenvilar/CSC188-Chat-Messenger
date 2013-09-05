@@ -22,8 +22,10 @@
 		<div class="navbar">
 		<br/>
 			<div align="right"><font color="white">You are currently logged in as</font></div>
+			
 			<div class="btn-group pull-right">
 					<a class="btn btn-primary" href="#">${employee}</a>
+					<a class="btn btn-primary" data-toggle="modal" href="#editProfile"> Edit Profile Info </a>
 					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a data-toggle="modal" href="#edit">Edit</a></li>
@@ -84,13 +86,39 @@
 				
 				
 			</div>
-			
+
 			
 			
 			<div id="profileModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" area-hidden="true">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					<h1> Profile </h1>
+
+
+<%--------------------%>		
+<%-----edit modal-----%>
+<%--------------------%>
+
+		<div align="center" class="container">
+			<div id="editProfile" class="modal hide fade in" style="display: none; ">
+				<div class="modal-header" align="left">
+					<a class="close icon-remove" data-dismiss="modal">X</a>
+					<h1>Fill out form</h1>
+				</div>
+				<div class="modal-body">
+					<g:form controller="user" action="addUser">
+						<div> <font size="2"> Firstname:&nbsp;<input type="text" name="firstName" required="true"></input>
+						</br>
+						Lastname:&nbsp;<input type="text" name="lastName" required="true"></input>
+						</br>
+						Address:&nbsp;<input type="text" name="lastName" required="true"></input>
+						</br>
+						Password:&nbsp;<input type="password" name="password" required="true"></input>
+						<center><input type="submit" class="btn btn-primary" value="Edit"></input></center>
+					</g:form>
+				</div>
+			</div>
+		</div>
 					
 				</div>
 				<div class="modal-body">
@@ -120,7 +148,8 @@
 				</div>
 			</div>
 		<div>
-		
+
+
 		<div align="center" class="container">
 			<div id="edit" class="modal hide fade in" style="display: none; ">
 				<div class="modal-header" align="left">
