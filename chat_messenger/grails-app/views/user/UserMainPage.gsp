@@ -76,7 +76,7 @@
 				 <table>
 					<tr>
 						<td>
-							<textarea class="field span11" id="textarea" rows="4" placeholder="Write a message...">
+							<textarea class="span11" id="textarea" rows="4" placeholder="Write a message...">
 							</textarea>
 						</td>
 						<td id="send">
